@@ -22,7 +22,7 @@ form.addEventListener('submit', async (e) => {
   statusEl.textContent = 'Отправляем заявку...';
   const data = Object.fromEntries(new FormData(form).entries());
   try {
-    const res = await fetch('/api/lead', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
+   const res = await fetch('https://ustoyor-backend.onrender.com/api/lead', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
     const json = await res.json();
     if(!res.ok || !json.ok) throw new Error(json.message || 'Ошибка');
     statusEl.className = 'ok';
