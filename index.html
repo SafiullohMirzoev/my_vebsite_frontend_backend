@@ -1,227 +1,79 @@
-[25.05.2026 13:25] safiyulloh_dev: <!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>crm_automation — сайты, CRM и Telegram-боты</title>
-  <meta name="description" content="Профессиональные сайты, CRM-системы, Telegram-боты и автоматизация для бизнеса." />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+Примеры проектов, которые мы уже создали для клиентов.
+  </p>
 
-<header class="header">
-  <a class="brand" href="#top">
-    <span>S.M</span>
-    <div>
-      <b>crm_automation</b>
-      <small>Web • CRM • Telegram Bot</small>
-    </div>
-  </a>
+  <div style="margin-top:30px; display:grid; gap:20px;">
 
-  <nav>
-    <a href="#services">Услуги</a>
-    <a href="#solutions">Проекты</a>
-    <a href="#pricing">Тарифы</a>
-    <a href="#request">Заявка</a>
-  </nav>
+    <div style="border:1px solid #ccc; padding:20px; border-radius:15px;">
+      <h3>🏢 Telegram-бот для продажи квартир</h3>
+      <p>
+        Информационный Telegram-бот с каталогом квартир,
+        контактами и кнопками связи.
+      </p>
 
-  <div class="actions">
-    <a id="tgTop" class="pill telegram" target="_blank">Telegram</a>
-    <a id="waTop" class="pill whatsapp" target="_blank">WhatsApp</a>
-  </div>
-</header>
-
-<main id="top">
-
-<section class="hero">
-  <div class="heroText">
-    <p class="badge">Цифровые решения для бизнеса</p>
-    <h1>Создаём сайты, CRM-системы и <span>Telegram-боты</span></h1>
-    <p>
-      Помогаем бизнесу получать заявки, принимать клиентов, вести продажи
-      и автоматизировать работу через сайт, WhatsApp, Telegram и онлайн-формы.
-    </p>
-
-    <div class="heroBtns">
-      <button class="btn" data-scroll>Оставить заявку</button>
-      <a id="waHero" class="btn outline" target="_blank">Написать в WhatsApp</a>
+      <a href="https://t.me/real_estate_dushanbe_bot"
+         target="_blank"
+         style="display:inline-block;padding:10px 15px;
+         background:#0088cc;color:white;
+         border-radius:10px;text-decoration:none;">
+         Открыть бот
+      </a>
     </div>
 
-    <div class="stats">
-      <div><b>Web</b><small>сайты и лендинги</small></div>
-      <div><b>CRM</b><small>клиенты и продажи</small></div>
-      <div><b>Bot</b><small>заявки в Telegram</small></div>
-    </div>
-  </div>
+    <div style="border:1px solid #ccc; padding:20px; border-radius:15px;">
+    <h3>🌐 Веб-сайт для компании NC Stone and Tiles</h3>
+<p>
+  Современный корпоративный сайт для компании по изготовлению
+  и установке каменных столешниц, плитки и custom stone work.
+</p>
 
-  <div class="profile">
-    <img src="safiyulloh.jpg" alt="Safiyulloh Dev">
-    <div>
-      <h3>Safiyulloh Dev</h3>
-      <p>Сайты • CRM • Telegram-боты • автоматизация</p>
+      <a href="https://ncstoneandtiles.com"
+         target="_blank"
+         style="display:inline-block;padding:10px 15px;
+         background:#111;color:white;
+         border-radius:10px;text-decoration:none;">
+         Посмотреть сайт
+      </a>
     </div>
+
+
+     <div style="border:1px solid #ccc; padding:20px; border-radius:15px;">
+    <h3>🌐 Веб-сайт для продажи квартир </h3>
+<p>
+ Информационный веб-сайт с каталогом квартир,
+        контактами и кнопками связи.
+</p>
+
+      <a href="http://178.104.103.39:3000/"
+         target="_blank"
+         style="display:inline-block;padding:10px 15px;
+         background:#111;color:white;
+         border-radius:10px;text-decoration:none;">
+         Посмотреть сайт
+      </a>
+    </div>
+
+
   </div>
 </section>
 
-<section id="services" class="section">
-  <p class="sectionTag">Что можно заказать</p>
-  <h2>Услуги</h2>
+    <section id="request" class="section request">
+      <div><p class="tag">Заявка</p><h2>Оставьте заявку</h2><p>После отправки сообщение придёт администратору в Telegram-бот.</p></div>
+      <form id="leadForm">
+        <input name="name" placeholder="Ваше имя" required />
+        <input name="phone" placeholder="Телефон / WhatsApp" required />
+        <input name="business" placeholder="Ваш бизнес" />
+        <select name="service" required><option value="">Что нужно?</option><option>Веб-сайт</option><option>CRM-система</option><option>Telegram-бот</option><option>Сайт + CRM + Telegram-бот</option></select>
+        <textarea name="message" placeholder="Коротко опишите задачу"></textarea>
+        <input type="hidden" name="packageName" />
+        <button class="btn" type="submit">Отправить заявку</button>
+        <p id="status"></p>
+      </form>
+    </section>
+  </main>
 
-  <div class="cards">
-    <article>
-      <span>🌐</span>
-      <h3>Веб-сайт</h3>
-      <p>Лендинг, сайт компании, каталог товаров/услуг, страница для Instagram и рекламы.</p>
-    </article>
+  <footer><b>crm_automation</b><span id="contacts"></span></footer>
+  <script src="script.js"></script>
 
-    <article>
-      <span>📊</span>
-      <h3>CRM-система</h3>
-      <p>Клиенты, заявки, продажи, сотрудники, документы, статусы и отчёты.</p>
-    </article>
-
-    <article>
-      <span>🤖</span>
-      <h3>Telegram-бот</h3>
-      <p>Заявки, бронирование, меню, уведомления администратору и автоответы клиентам.</p>
-    </article>
-
-    <article>
-      <span>💬</span>
-      <h3>WhatsApp / Telegram</h3>
-      <p>Кнопки связи, быстрые сообщения и маршрутизация клиента к администратору.</p>
-    </article>
-  </div>
-</section>
-
-<section id="solutions" class="section soft">
-  <p class="sectionTag">Примеры решений</p>
-  <h2>Проекты для бизнеса</h2>
-
-  <div class="cards">
-    <article>
-      <span>🧾</span>
-      <h3>Сайт + Telegram-бот</h3>
-      <p>Клиент заполняет форму на сайте, заявка сразу приходит администратору в Telegram.</p>
-    </article>
-
-    <article>
-      <span>📈</span>
-      <h3>CRM для продаж</h3>
-      <p>Учет клиентов, объектов, заказов, оплат и статусов в одной панели.</p>
-    </article>
-
-    <article>
-      <span>🛒</span>
-      <h3>Бот для магазина</h3>
-      <p>Каталог, вопросы клиентов, заявки, связь с менеджером и уведомления.</p>
-    </article>
-
-    <article>
-      <span>📅</span>
-      <h3>Бронирование услуг</h3>
-      <p>Запись клиента, выбор услуги, даты, времени и отправка заявки админу.</p>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <p class="sectionTag">Наши проекты</p>
-  <h2>Наши проекты</h2>
-
-  <div class="projectGrid">
-    <article class="projectCard dark">
-      <h3>Telegram-бот для продажи квартир</h3>
-      <p>Информационный Telegram-бот с каталогом квартир, контактами и кнопками связи.</p>
-      <a href="https://t.me/real_estate_dushanbe_bot" target="_blank">Открыть бот</a>
-    </article>
-
-    <article class="projectCard">
-      <h3>Веб-сайт для компании NC Stone and Tiles</h3>
-[25.05.2026 13:25] safiyulloh_dev: <p>Современный корпоративный сайт для компании по изготовлению и установке каменных столешниц.</p>
-      <a href="https://ncstoneandtiles.com" target="_blank">Посмотреть сайт</a>
-    </article>
-
-    <article class="projectCard dark">
-      <h3>Веб-сайт для продажи квартир</h3>
-      <p>Информационный веб-сайт с каталогом квартир, контактами и кнопками связи.</p>
-      <a href="http://178.104.103.39:3000/" target="_blank">Посмотреть сайт</a>
-    </article>
-  </div>
-</section>
-
-<section id="pricing" class="pricing">
-  <p class="sectionTag">Формат работы</p>
-  <h2>Тарифы</h2>
-
-  <div class="priceGrid">
-    <article>
-      <h3>Basic</h3>
-      <b>от 7000 TJS</b>
-      <p>Одностраничный сайт + кнопки WhatsApp/Telegram.</p>
-      <button data-package="Basic" data-scroll>Выбрать</button>
-    </article>
-
-    <article class="popular">
-      <em>Популярно</em>
-      <h3>Standard</h3>
-      <b>от 20000 TJS</b>
-      <p>Сайт + форма заявки + отправка в Telegram-бот.</p>
-      <button data-package="Standard" data-scroll>Выбрать</button>
-    </article>
-
-    <article>
-      <h3>Premium</h3>
-      <b>обсуждается</b>
-      <p>CRM, Telegram-бот, база данных и личные кабинеты.</p>
-      <button data-package="Premium" data-scroll>Обсудить</button>
-    </article>
-  </div>
-</section>
-
-<section id="request" class="request">
-  <div>
-    <p class="sectionTag">Заявка</p>
-    <h2>Оставьте заявку</h2>
-    <p>После отправки сообщение придёт администратору в Telegram-бот.</p>
-
-    <div class="contactBtns">
-      <a id="tgBottom" target="_blank">Telegram</a>
-      <a id="waBottom" target="_blank">WhatsApp</a>
-    </div>
-  </div>
-
-  <form id="leadForm">
-    <input name="name" placeholder="Ваше имя" required>
-    <input name="phone" placeholder="Телефон / WhatsApp" required>
-    <input name="business" placeholder="Ваш бизнес">
-    <select name="service" required>
-      <option value="">Что нужно?</option>
-      <option>Веб-сайт</option>
-      <option>CRM-система</option>
-      <option>Telegram-бот</option>
-      <option>Сайт + CRM + Telegram-бот</option>
-    </select>
-    <textarea name="message" placeholder="Коротко опишите задачу"></textarea>
-    <input type="hidden" name="packageName">
-    <button class="btn" type="submit">Отправить заявку</button>
-    <p id="status"></p>
-  </form>
-</section>
-
-</main>
-
-<footer>
-  <div class="brand footerBrand">
-    <span>S.M</span>
-    <div>
-      <b>crm_automation</b>
-      <small>Web • CRM • Telegram Bot</small>
-    </div>
-  </div>
-  <p id="contacts"></p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
+
